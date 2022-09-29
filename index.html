@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send form Data on Mail</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="form_box">
+            <form id="form" onsubmit="sendMail(); reset(); return false">
+                <div class="form-row">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" placeholder="Your Name" minlength="3" maxlength="30" required>
+                </div>
+                <div class="form-row">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-row">
+                    <label for="name">Phone:</label>
+                    <input type="tel" name="phone" id="phone" placeholder="Your Phone" minlength="10" maxlength="10" required>
+                </div>
+                <div class="form-row">
+                    <label for="message">Message:</label>
+                    <textarea name="message" id="message" rows="10" placeholder="Tell me something"></textarea>
+                </div>
+                <div class="form-row">
+                    <button id="btn" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
+
+
+    <script src="./script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</body>
+</html>
